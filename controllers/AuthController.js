@@ -60,9 +60,9 @@ exports.login = async (req, res) => {
       success: true,
       jwtToken,
       email,
+      _id:user._id
     });
   } catch (error) {
-    console.log("erorrr", error);
     res.status(500).json({
       message: "Internal Server Error",
       success: false,
